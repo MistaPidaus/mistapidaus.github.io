@@ -1,0 +1,537 @@
+/* Start with Body Design 1st (Beginner) */
+body {
+	font-family: Arial;
+	font-size: 14px;
+	color: #9a9a9a;
+	width: 96%;
+	margin-left: 2%;
+	
+}
+/* Social Media Icon possition */
+#social {
+	float: left;
+}
+
+/* Seperate Header Links */
+.borderlinks {
+	border-bottom: 1px solid #f4f4f4;
+	padding-top: 30px;
+}
+
+/* Links at header */
+#headerLinks {
+	float: right;
+	text-align: center;
+}
+/* Design Header Link style */
+#headerLinks a {
+	border-left: 1px solid #797979;
+	padding: 10px;
+	text-decoration: none;
+	color: #797979;
+	
+}
+/* Effect when hover on link */
+#headerLinks a:hover {
+	color: #e62a8a;
+	text-decoration: underline;
+}
+
+/* Add to cart button */
+.addtocart {
+	float: right;
+	margin: 0 50px 0 0;
+	background: #9a9a9a;
+	height: 35px;
+	border-radius: 2px;
+	border: none;
+	color: #fff;
+	
+}
+
+.addtocart:hover {
+	color: #000;
+}
+
+/* View Cart Icons */
+.addbag {
+	float: right;
+	margin: 45px 0 0 10px;
+}
+
+/* Discount text style */
+.discounted {
+	font-weight: bold;
+}
+
+/* Clear any border at headerlinks */
+#headerLinks .clears {
+	border: none;
+}
+
+
+/* Logo Style */
+#Logo {
+	padding: 3%;
+	padding-top: 2%;
+}
+
+/* Form style for search */
+.form-wrapper{
+	float: right;
+	padding-top: 50px;
+}
+
+.form-wrapper input[type="search"] {
+	background: #f1f1f1;
+	border: none;
+	width: 250px;
+	height: 35px;
+	padding-left: 10px;
+}
+
+.form-wrapper input[type="image"] {
+	height: 35px;
+	width: 45px;
+	float: right;
+}
+
+/* Navigation styling Starts Here */
+.toggleMenu {
+	display: none;
+	background: #666;
+	padding: 10px 15px;
+	color: #fff;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: url('../images/navbl.png');
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: left;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background: url('../images/navbl.png');
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #e62a8a; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #e62a8a; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 49px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+	
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+	z-index: 1;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+.active {
+	background: #e62a8a;
+}
+.logins {
+	float: right;
+
+}
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+/* Sliding image effect */
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 100px;
+  left: 20%;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+} /* End sliding effect */
+
+/* Global h1 effect */
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+/* Styling for "New Arrival" & "Top Seller" Text Header */
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #000;
+  top: 10px;
+  width: 700px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+/* Design for Item Catalogue 1st Row */
+.one-third {
+	width: 20%;
+	float: left;
+	margin: 2% 0 3% 4%;
+	font-weight: bold;
+}
+/* Possitioning Image in Catalogue */
+.img-cata {
+	padding: 0 7%;
+	
+}
+/* Prices style text */
+.prices {
+	color: #e62a8a;
+	font-size: 20px;
+}
+
+.prices1 {
+	color: #e62a8a;
+	font-size: 20px;
+	text-decoration: line-through;
+}
+
+/* Clear any element */
+.clearfix {
+	clear:both;
+}
+
+/* Footer Design */
+footer{
+	background: #242424;
+	width: 100%;
+	padding-top:1%;
+	overflow: auto;
+}
+
+/* Design for links in footer */
+.tab1 {
+	float: left;
+	margin: 2% 0 3% 5%;
+}
+
+.tab1 p {
+	width: 300px;
+}
+
+.tab1 li {
+	padding: 8px;
+}
+.tab1 a {
+	color: #9a9a9a;
+	text-decoration: none;
+}
+
+.tab1 a:hover {
+	color: #e62a8a;
+	text-decoration: underline;
+}
+
+/* Footer Copyright Section */
+.footer-end {
+	float:left;
+	padding: 1% 0 1% 2%;
+	background: #0f0f0f;
+	width: 98%;
+}
+
+/* Newsletter part here */
+.newsletter input[type="email"] {
+	text-align: center;
+	width: 250px;
+	height: 30px;
+	background: #565656;
+	border-radius: 3px;
+	box-shadow: 10px;
+	color: #fff;
+	border: none;
+}
+
+.newsletter button {
+	background: #e62a8a;
+	color: #fff;
+	border: none;
+	height: 32px;
+	border-radius: 3px;
+	width: 253px;
+	
+}
+
+.submit {
+	padding-top: 5px;
+}
+ 
+/*------------- MEDIA QUERIES ( FOR MOBILE USERS) --------------*/
+@media screen and (min-width: 414px) {
+	.form-wrapper {
+		display: none;
+	}
+	
+	.addbag {
+		margin: 20px 0 0 0;
+		height: 50px;
+	}
+	
+	nav {
+		margin: 0;
+	}
+	
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+	
+	.toggle {
+		display: block;
+		background-image: url('../images/navbl.png');
+		padding: 14px 20px;
+		color: #FFF;
+		font-size: 17px;
+		text-decoration: none;
+		border: none;
+	}
+	
+	.toggle:hover {
+		background: #e62a8a;
+	}
+	
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+	
+	nav ul li {
+		display: block;
+		width: 100%;
+	}
+	
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+	
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+	
+	nav a:hover,
+	nav ul ul ul a {
+		background-color: #e62a8a;
+	}
+	
+	nav ul li ul li .toggle,
+	nav ul ul a,
+	nav ul ul ul a{
+		padding: 14px 20px;
+		color: #FFF;
+		font-size: 17px;
+	}
+	
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		#e62a8a;
+	}
+	
+	nav ul ul {
+		float: none;
+		position: static;
+		color: #fff;
+	}
+	
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+	
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	
+	nav ul ul ul li {
+		position: static;
+	}
+	
+	.logins {
+		float: left;
+	}
+	
+	.fancy span:before,
+	.fancy span:after {
+		content: "";
+		position: absolute;
+		height: 5px;
+		border-bottom: 1px solid #000;
+		top: 10px;
+		width: 50%;
+	}
+	.fancy span:before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	.fancy span:after {
+		left: 100%;
+		margin-left: 15px;
+	}
+	
+	.one-third {
+		width: 100%;
+		float: left;
+		margin: 0 0 0 10px;
+		padding: 0 0 10px 0;
+	}
+	
+	.addtocart {
+		margin: 0 50px 0 0;
+	}
+	
+	footer {
+		background: #242424;
+		width: 100%;
+		padding-top:1%;
+		overflow: auto;
+	}
+
+	.tab1 {
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.tab1 h2 {
+		text-align: center;
+		padding: 5px;
+	}
+
+	.tab1 p {
+		width: 90%;
+		padding: 10px;
+		margin: 0;
+	}
+
+	.tab1 img {
+		padding: 10px;
+	}
+
+
+	.footer-end {
+		text-align: center;
+		width: 98%;
+	}
+
+	.newsletter input[type="email"] {
+		margin: 1px 0 1px 10px;
+	}
+
+	.newsletter button {
+		margin: 1px 10px 10px 10px;
+	}
+
+	.newsletter h2{
+		text-align: center;
+	}
+	.newsletter p {
+		text-align: center;
+		
+	}
+}
