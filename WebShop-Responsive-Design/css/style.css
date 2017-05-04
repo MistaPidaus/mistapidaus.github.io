@@ -362,7 +362,7 @@ footer{
 }
  
 /*------------- MEDIA QUERIES ( FOR MOBILE USERS) --------------*/
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
 	.form-wrapper {
 		display: none;
 	}
